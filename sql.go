@@ -62,12 +62,11 @@ func (*SQL) Open(database string, connectionString string) (*dbsql.DB, error) {
 		return nil, fmt.Errorf("database %s is not supported", database)
 	}
 
-	dbType := database
-	if dbType == "oracle" {
-		dbType := "godror"
+	if database == "oracle" {
+		database = "godror"
 	}
 
-	db, err := dbsql.Open(dbType, connectionString)
+	db, err := dbsql.Open(database, connectionString)
 	if err != nil {
 		return nil, err
 	}

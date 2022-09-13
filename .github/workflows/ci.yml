@@ -28,8 +28,7 @@ jobs:
       - name: Verify builds with xk6
         run: |
           go install go.k6.io/xk6/cmd/xk6@latest
-          CGO_ENABLED=1
-          xk6 build --with ${{ steps.module-name.outputs.Module }}=.
+          CGO_ENABLED=1 xk6 build --with ${{ steps.module-name.outputs.Module }}=.
 
   run-unit-tests:
     runs-on: ubuntu-latest
