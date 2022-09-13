@@ -67,7 +67,7 @@ func (*SQL) Open(database string, connectionString string) (*dbsql.DB, error) {
 		dbType := "godror"
 	}
 
-	db, err := dbsql.Open(database, connectionString)
+	db, err := dbsql.Open(dbType, connectionString)
 	if err != nil {
 		return nil, err
 	}
