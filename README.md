@@ -1,7 +1,7 @@
 # xk6-sql
 
 This is a [k6](https://github.com/grafana/k6) extension using the
-[xk6](https://github.com/grafana/xk6) system. This extension is a fork of [grafana/xk6-sql](https://github.com/grafana/xk6-sql) which was extended by including the [Go DRiver for Oracle](https://github.com/godror/godror) which allows connecting to an Oracle database too.
+[xk6](https://github.com/grafana/xk6) system. This extension is a fork of [grafana/xk6-sql](https://github.com/grafana/xk6-sql) which was extended by including the [Go Driver for Oracle](https://github.com/godror/godror) which allows connecting to an Oracle database too.
 
 Supported RDBMSs: `mysql`, `postgres`, `sqlite3`, `sqlserver`, `godror` (oracle). See the [tests](tests)
 directory for examples.
@@ -40,6 +40,9 @@ Then:
   set CGO_ENABLED=1
   xk6 build --with github.com/stefnedelchev/xk6-sql-with-oracle
   ```
+
+## Runtime
+If you're using Oracle, make sure you have downloaded the Basic or Basic Light instant client for oracle from [here](https://www.oracle.com/database/technologies/instant-client/downloads.html). After extracting the content of the client make sure to set the `ORACLE_HOME` environment variable on your system and make it point to the Oracle instant client directory. Additionally, add the directory to the `PATH` variable. Keep in mind that some column types of Oracle have specifics so make sure you check the [caveats section of the Go driver for Oracle docs](https://github.com/godror/godror#caveats).
 
 ## Development
 To make development a little smoother, use the `Makefile` in the root folder. The default target will format your code, run tests, and create a `k6` binary with your local code rather than from GitHub.
