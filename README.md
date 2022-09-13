@@ -1,7 +1,7 @@
 # xk6-sql
 
 This is a [k6](https://github.com/grafana/k6) extension using the
-[xk6](https://github.com/grafana/xk6) system. This extension was improved by including the [Go DRiver for ORacle](https://github.com/godror/godror) which allows connecting to an Oracle database too.
+[xk6](https://github.com/grafana/xk6) system. This extension is a fork of [grafana/xk6](https://github.com/grafana/xk6-sql) which was extended by including the [Go DRiver for Oracle](https://github.com/godror/godror) which allows connecting to an Oracle database too.
 
 Supported RDBMSs: `mysql`, `postgres`, `sqlite3`, `sqlserver`, `godror` (oracle). See the [tests](tests)
 directory for examples.
@@ -11,7 +11,7 @@ directory for examples.
 To build a `k6` binary with this plugin, first ensure you have the prerequisites:
 
 - [Go toolchain](https://go101.org/article/go-toolchain.html)
-- If you're using SQLite, a build toolchain for your system that includes `gcc` or
+- If you're using SQLite or Oracle, a build toolchain for your system that includes `gcc` or
   another C compiler. On Debian and derivatives install the `build-essential`
   package. On Windows you can use [tdm-gcc](https://jmeubank.github.io/tdm-gcc/).
   Make sure that `gcc` is in your `PATH`.
