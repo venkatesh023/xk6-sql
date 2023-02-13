@@ -1,4 +1,4 @@
-module github.com/stefnedelchev/xk6-sql-with-oracle
+module github.com/stefnedelchevbrady/xk6-sql-with-oracle
 
 go 1.17
 
