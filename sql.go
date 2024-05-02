@@ -6,6 +6,7 @@ import (
 	"fmt"
 
 	// Blank imports required for initialization of drivers
+	_ "github.com/godror/godror"
 	_ "github.com/ClickHouse/clickhouse-go/v2"
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"
