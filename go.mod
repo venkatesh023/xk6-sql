@@ -3,7 +3,6 @@ module github.com/venkatesh023/xk6-sql
 go 1.21
 
 require (
-	github.com/godror/godror v0.37.0
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/lib/pq v1.10.9
 	github.com/mattn/go-sqlite3 v1.14.18
@@ -13,6 +12,7 @@ require (
 )
 
 require (
+	github.com/godror/godror v0.37.0
 	github.com/ClickHouse/clickhouse-go/v2 v2.22.0
 	github.com/dop251/goja v0.0.0-20240220182346-e401ed450204
 	github.com/microsoft/go-mssqldb v1.6.0
